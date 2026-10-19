@@ -13,7 +13,7 @@ export const contactInfo = {
     hours: "Mon - Fri, 9 AM - 6 PM PST",
 }
 
-export const sosialMedia = ["Github", "LinkedIn", "Twitter"];
+export const socials = ["Github", "LinkedIn", "Twitter"];
 
 export const onlineLinks = [
     { name: "Github", handle: "@alexcarter" },

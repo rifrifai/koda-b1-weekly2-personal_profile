@@ -1,3 +1,6 @@
+import { useEffect } from "react";
+import { useLocation } from "react-router";
+
 export const navLinks = [
     { to: "/", label: "Home"},
     { to: "/about", label: "About"},

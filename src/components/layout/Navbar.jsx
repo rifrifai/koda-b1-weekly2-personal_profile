@@ -12,7 +12,7 @@ export default function Navbar() {
 		}`;
 
 	return (
-		<header className="sticky top-0 z-50 border-b border-gray-100 bg-white/95 backdrop-blur">
+		<header className="sticky top-0 z-50 border-b border-gray-100 bg-white/95 backdrop-blur-xl">
 			<div className="mx-auto flex max-w-6xl items-center justify-between px-5 py-3">
 				<Link to="/" className="text-lg font-bold text-navy">Alex Carter</Link>
 

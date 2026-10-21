@@ -18,9 +18,9 @@ export default function Projects() {
 		/>
 		<Section>
 			<div className="mb-10 flex flex-wrap justify-center gap-2">
-				{projectFilters.map((f) => (
+				{projectFilters.map((index ,f) => (
 					<button
-						key={f}
+						key={f.index}
 						type="button"
 						onClick={() => setFilter(f)}
 						className={`rounded-full px-5 py-2 text-sm font-medium transition-colors ${

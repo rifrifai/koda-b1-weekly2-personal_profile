@@ -1,4 +1,22 @@
+/**
+ * pusat semua isi website untuk mengganti teks, proyek, skill, dan sebagainya,
+ * cukup ubah data di file ini tanpa menyentuh komponen.
+ */
 
+/**
+ * @typedef {Object} Project
+ * @property {number} id - ID unik proyek.
+ * @property {string} title - nama proyek.
+ * @property {"Frontend"|"Backend"|"Full Stack"} category - kategori (dipakai filter di halaman Projects).
+ * @property {boolean} featured - `true` jika ditampilkan di bagian Featured Projects pada Home.
+ * @property {string} image - path gambar di folder `public/` (kosong = kotak abu-abu).
+ * @property {string} github - link repository.
+ * @property {string} demo - link demo langsung.
+ * @property {string} description - deskripsi singkat.
+ * @property {string[]} tags - daftar teknologi yang dipakai.
+ */
+
+/** menu navigasi (label dan path) yang dipakai Navbar dan Footer. */
 export const navLinks = [
     { to: "/", label: "Home"},
     { to: "/about", label: "About"},
@@ -7,6 +25,7 @@ export const navLinks = [
     { to: "/contact", label: "Contact"},
 ]
 
+/** info kontak pada halaman Contact dan Footer */
 export const contactInfo = {
     email: "alex.carter@gmail.com",
     location: "San Fransisco, CA 94105",
@@ -14,8 +33,10 @@ export const contactInfo = {
     hours: "Mon - Fri, 9 AM - 6 PM PST",
 }
 
+/** info social media pada di Footer */
 export const socials = ["Github", "LinkedIn", "Twitter"];
 
+/** daftar akun online pada halaman Contact */
 export const onlineLinks = [
     { name: "Github", handle: "@alexcarter" },
     { name: "LinkedIn", handle: "Alex Carter" },
@@ -24,20 +45,24 @@ export const onlineLinks = [
 ]
 
 // home
+/** angka ringkas di hero halaman Home */
 export const stats = [
     { value: "20+", label: "Projects" },
     { value: "3+", label: "Years Exp." },
     { value: "15+", label: "Happy Clients" },
 ]
 
+/** tiga kartu "a little about me" di Home */
 export const aboutCards = [
     { title: "Problem Solver", text: "I enjoy breaking down complex challenges into simple, elegant solutions that scale well over time." },
     { title: "Team Player", text: "Experienced collaborating with designers, product managers, and engineers in agile environments." },
     { title: "Lifelong Learner", text: "Always exploring new tools and technologies. Currently deepening my cloud architecture and DevOps skills." },
 ]
 
+/** daftar teknologi berbentuk tag di Home */
 export const skillTags = ["React", "TypeScript", "JavaScript", "Node.js", "Python", "PostgreSQL", "MongoDB", "Docker", "AWS", "Next.js", "REST APIs", "GraphQL", "Tailwind CSS", "Figma", "Git"]
 
+/** testimoni klien di Home */
 export const testimonials = [
     { quote: "Alex delivered our e-commerce platform ahead of schedule. The code quality was outstanding and the UI exceeded our expectations.", name: "Sarah Johnson", role: "CEO, BrightShop Inc." },
     { quote: "Working with Alex was a pleasure. They understood our requirements immediately and brought creative solutions to complex problems.", name: "Michael Chen", role: "CTO, Velocity Labs" },
@@ -45,6 +70,11 @@ export const testimonials = [
 ];
 
 // projects
+// taruh gambar di public/images/. jika image kosong/tidak ditemukan, tampil kotak abu-abu.
+/**
+ * daftar proyek portofolio. gambar diambil dari folder `public/images/`.
+ * @type {Project[]}
+ */
 export const projects = [
 	{ id: 1, title: "ShopEase", category: "Full Stack", featured: true, image: "/images/shopease.jpg", github: "#", demo: "#",
 		description: "A full-featured e-commerce platform with product catalog, shopping cart, order history, wishlists, and Stripe payment integration.", tags: ["React", "Node.js", "MongoDB", "Stripe"] },
@@ -60,15 +90,18 @@ export const projects = [
 		description: "A headless CMS and blog platform with Markdown support, tags, categories, scheduled publishing, and an admin dashboard.", tags: ["Next.js", "PostgreSQL", "Prisma", "TypeScript"] },
 ];
 
+/** pilihan filter kategori di halaman Projects */
 export const projectFilters = ["All", "Frontend", "Backend", "Full Stack"];
 
 // about
+/** riwayat pendidikan di halaman About */
 export const education = [
 	{ title: "B.S. Computer Science", place: "UC Berkeley · Berkeley, CA", date: "2019 – 2023", text: "Graduated with honors. Dean's List 2021 & 2022. Focused on software engineering, distributed systems, and human-computer interaction." },
 	{ title: "Full Stack Web Development", place: "Codecademy Pro · Online", date: "2022", text: "Intensive program covering modern JavaScript, React, Node.js, databases, and deployment workflows using industry-standard tools." },
 	{ title: "Data Structures & Algorithms", place: "Coursera — Stanford University · Online", date: "2021", text: "Certificate course covering sorting algorithms, trees, graphs, dynamic programming, and complexity analysis." },
 ];
 
+/** riwayat pengalaman pekerjaan di halaman About */
 export const workExperience = [
 	{ title: "Junior Software Developer", place: "TechCorp Inc. · San Francisco, CA", date: "Jan 2023 - Present", points: [
 		"Build and maintain full-stack features for a B2B SaaS platform serving 10,000+ users.",
@@ -82,6 +115,7 @@ export const workExperience = [
 		"Managed client communication, requirements gathering, scoping, and delivery." ] },
 ];
 
+/** daftar keahlian dan persentasenya (0-100) untuk komponen SkillBar */
 export const skillBars = [
 	{ label: "React / Next.js", value: 90 },
 	{ label: "TypeScript / JavaScript", value: 88 },
@@ -91,12 +125,14 @@ export const skillBars = [
 	{ label: "Docker / AWS", value: 65 },
 ];
 
+/** minat dan hobi di halaman About */
 export const interests = [
 	"Open Source", "UI/UX Design", "Machine Learning", "System Design",
 	"Rock Climbing", "Photography", "Coffee Brewing", "Reading Sci-Fi",
 ];
 
 // experiences
+/** baris table riwayat pekerjaan di halaman Experience */
 export const experienceTable = [
 	{ company: "TechCorp Inc.", position: "Junior Software Developer", duration: "Jan 2023 - Present", location: "San Francisco, CA", type: "Full-time" },
 	{ company: "Freelance", position: "Web Developer", duration: "Jun 2022 - Dec 2022", location: "Remote", type: "Contract" },
@@ -104,12 +140,14 @@ export const experienceTable = [
 	{ company: "UC Berkeley Tech Club", position: "President & Lead Developer", duration: "Sep 2021 - May 2023", location: "Berkeley, CA", type: "Volunteer" },
 ];
 
+/** daftar sertifikasi pada halaman Experience */
 export const certifications = [
 	{ abbr: "AWS", title: "AWS Certified Developer - Associate", issuer: "Amazon Web Services", date: "Dec 2023 · Valid until Dec 2026" },
 	{ abbr: "GCP", title: "Google Professional Cloud Developer", issuer: "Google Cloud", date: "Oct 2023 · Valid until Oct 2025" },
 	{ abbr: "MDB", title: "MongoDB Certified Developer Associate", issuer: "MongoDB Inc.", date: "Mar 2022 · Valid until Mar 2024" },
 ];
 
+/** daftar penghargaan pada halama Experince */
 export const awards = [
 	{ title: "Employee of the Month", org: "TechCorp Inc.", date: "March 2024", text: "Recognized for delivering the customer portal redesign ahead of schedule with zero post-launch bugs." },
 	{ title: "Best Overall Project", org: "Bay Area CodeFest Hackathon", date: "November 2022", text: "First place out of 48 teams for building a real-time food rescue coordination app in 24 hours." },
@@ -118,7 +156,10 @@ export const awards = [
 ];
 
 // contact
+/** pilihan negara pada dropdown form Contact. */
 export const countries = ["United States", "Canada", "United Kingdom", "Australia", "Germany", "Indonesia", "Singapore", "Other"];
+/** pilihan metode kontak (radio button) di form Contact. Juga dipakai untuk validasi di `contactSchema`. */
 export const contactMethods = ["Email", "Phone", "Whatsapp"];
+/** pilihan teknologi (checkbox) di form Contact. */
 export const techOptions = ["React", "Node.js", "Python", "TypeScript", "React Native", "Vue.js", "Django", "Express.js"];
 

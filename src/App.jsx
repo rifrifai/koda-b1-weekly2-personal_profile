@@ -9,7 +9,21 @@ import Footer from "./components/layout/Footer";
 import ScrollToTop from "./components/layout/ScrollToTop";
 import NotFound from "./pages/NotFound";
 
-
+/**
+ * komponen utama aplikasi: menyusun navbar, isi halaman (sesuai url), scrollToTop untuk berpindah halaman dengan kembali ke posisi atas, dan footer.
+ * harus dibungkus dengan <BrowserRouter> di main.jsx
+ * 
+ * Daftar route:
+ * - `/` Home
+ * - `/about` About
+ * - `/projects` Projects
+ * - `/experience` Experience
+ * - `/contact` Contact
+ * - `/*` NotFound
+ * 
+ * @component
+ * @returns {JSX.Element}
+*/
 
 export default function App() {
 	return (
